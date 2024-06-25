@@ -22,8 +22,8 @@ public class Item {
     @NotEmpty
     private String place;
 
-    // Updated to handle image upload
-    @Transient // Not stored in the database
+    
+    @Transient 
     private MultipartFile imageFile;
 
     private String imageUrl;
