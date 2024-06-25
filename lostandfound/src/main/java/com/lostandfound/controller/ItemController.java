@@ -80,12 +80,12 @@ public class ItemController {
         // Process image upload
         if (!imageFile.isEmpty()) {
             byte[] imageBytes = imageFile.getBytes();
-            String imageUrl = "save_image_here"; // Implement image saving logic
-            item.setImageUrl(imageUrl); // Set the image URL in the item entity
+            String imageUrl = "save_image_here";
+            item.setImageUrl(imageUrl); 
         }
 
         itemService.saveItem(item); // Save item to the database
-        return "redirect:/"; // Redirect to home page or another appropriate page
+        return "redirect:/"; // Redirect to home page 
     }
     @GetMapping("/search")
     public String searchItems(@RequestParam("query") String query, Model model) {
